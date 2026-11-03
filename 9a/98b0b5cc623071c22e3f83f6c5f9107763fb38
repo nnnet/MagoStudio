@@ -1,0 +1,19 @@
+mock-auth.py
+  s_d041fa3849bec9::t_021e2e8df218d4 6-7,9-11,13-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9a98b0b5cc623071c22e3f83f6c5f9107763fb38",
+  "prompts": {},
+  "sessions": {
+    "s_d041fa3849bec9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05276843-7763-45f0-b934-fb111e15f3d0",
+        "model": "unknown"
+      },
+      "human_author": "nnnet <21066097+nnnet@users.noreply.github.com>"
+    }
+  }
+}
