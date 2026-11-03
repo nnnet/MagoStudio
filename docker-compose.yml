@@ -5,9 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: magostudio
+    container_name: magostudio-app
     ports:
-      - "7008:8080"
+      - "7008:3000"
     volumes:
       - ./work:/app/work
       - ./video-output:/app/video-output
@@ -23,7 +23,7 @@ services:
     build:
       context: ./comfyui-portable
       dockerfile: Dockerfile
-    container_name: comfiui-portable
+    container_name: magostudio-comfiui
     ports:
       - "8188:8188"
     volumes:

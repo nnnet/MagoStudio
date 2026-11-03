@@ -1,6 +1,8 @@
-FROM python:3.11-slim
+FROM node:24-alpine
 WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --prefer-offline --no-audit --no-fund
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt 2>/dev/null || true
-EXPOSE 8080
-CMD ["python", "-m", "http.server", "8080"]
+ENV NODE_ENV=production
+EXPOSE 3000
+CMD ["npm", "run", "dev:web"]
