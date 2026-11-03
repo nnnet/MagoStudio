@@ -1,0 +1,71 @@
+docker-compose.yml
+  s_d041fa3849bec9::t_c78451098f0a37 1-19,21-35
+  s_d041fa3849bec9::t_8320f70ce2a544 20
+Dockerfile
+  s_d041fa3849bec9::t_fef53fc96f14bd 1-6
+Makefile
+  s_d041fa3849bec9::t_cd15955f6c0878 1-12
+  s_d041fa3849bec9::t_66c4530b9a7d62 13-30
+.serena/.gitignore
+  s_d041fa3849bec9::t_178baefb1decb1 1-2
+.serena/project.yml
+  s_d041fa3849bec9::t_941a1e020976fa 1-185
+AGENTS.md
+  s_d041fa3849bec9::t_991d3600472f15 1-3
+CLAUDE.md
+  s_d041fa3849bec9::t_746f1ce8cfa7bf 1-29
+bdd/conftest.py
+  s_d041fa3849bec9::t_2ff735f82bdab1 1-29
+bdd/features/project-baseline.feature
+  s_d041fa3849bec9::t_58c5194724e056 1-15
+bdd/features/project-is-bootstrapped.feature
+  s_d041fa3849bec9::t_1275292b3804d2 1-21
+bdd/pytest.ini
+  s_d041fa3849bec9::t_df4e52e0fe64a8 1-17
+bdd/requirements.txt
+  s_d041fa3849bec9::t_75dbecb9ab213b 1-8
+bdd/steps/repo_steps.py
+  s_d041fa3849bec9::t_5d6c8049f8374a 1-48
+bdd/steps/sql_steps.py
+  s_d041fa3849bec9::t_ae2eada81274fd 1-99
+bdd/test_features.py
+  s_d041fa3849bec9::t_ac3afd9792a2a4 1-16
+docs/README.md
+  s_d041fa3849bec9::t_e5876190ec8f71 1-40
+docs/_leaf-template.md
+  s_d041fa3849bec9::t_688055a005d9b0 1-33
+docs/architecture/index.md
+  s_d041fa3849bec9::t_c550a52cdf427c 1-31
+docs/architecture/overview.md
+  s_d041fa3849bec9::t_cd5a5bfdb707cf 1-26
+docs/decisions/0000-template.md
+  s_d041fa3849bec9::t_beea9949221675 1-26
+docs/decisions/index.md
+  s_d041fa3849bec9::t_d8e5fe40270169 1-22
+docs/operations/index.md
+  s_d041fa3849bec9::t_8f270acd96a591 1-25
+docs/operations/runbook.md
+  s_d041fa3849bec9::t_5ded3d504f1669 1-29
+openspec/config.yaml
+  s_d041fa3849bec9::t_c35bc63f30777e 1-32
+openspec/specs/project-baseline/spec.md
+  s_d041fa3849bec9::t_7e31c652d081a2 1-24
+plans/README.md
+  s_d041fa3849bec9::t_33d8ab4d8ab7a6 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "70e61f30ff0fa14af1e987aa68c0cf3b541facb1",
+  "prompts": {},
+  "sessions": {
+    "s_d041fa3849bec9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05276843-7763-45f0-b934-fb111e15f3d0",
+        "model": "thinkingmachines/inkling-small:free"
+      },
+      "human_author": null
+    }
+  }
+}
