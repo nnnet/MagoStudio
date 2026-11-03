@@ -1,0 +1,21 @@
+docker-compose.yml
+  s_d041fa3849bec9::t_d51d55af9722d3 45-47
+mock-auth.py
+  s_d041fa3849bec9::t_63e63fa931d2e5 1-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9460b6fb30f94098e5e5709eb933d914094ef99d",
+  "prompts": {},
+  "sessions": {
+    "s_d041fa3849bec9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05276843-7763-45f0-b934-fb111e15f3d0",
+        "model": "nvidia/nemotron-3.5-super-vl:free"
+      },
+      "human_author": "nnnet <21066097+nnnet@users.noreply.github.com>"
+    }
+  }
+}
