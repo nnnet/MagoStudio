@@ -13,9 +13,10 @@ services:
       - ./video-output:/app/video-output
       - ./source:/app/source
       - ./data:/app/data
+      - ./stub-localDesktop.ts:/app/src/platform/localDesktop.ts:ro
     environment:
       - PYTHONUNBUFFERED=1
-      - MAGO_BACKEND_URL=http://mock-auth:9999
+      - MAGO_BACKEND_URL=http://localhost:9999
     networks:
       - raider-net
     restart: unless-stopped
