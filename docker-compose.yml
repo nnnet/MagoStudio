@@ -15,7 +15,7 @@ services:
       - ./data:/app/data
     environment:
       - PYTHONUNBUFFERED=1
-    entrypoint: ["/bin/sh", "-c", "sed -i 's/throw new Error(\"The Mago desktop bridge is unavailable\");/console.warn(\"Stub mode in container\"); return {};/' src/platform/localDesktop.ts && npm run dev:web"]
+    entrypoint: ["/bin/sh", "-c", "sed -i 's/throw new Error(\"The Mago desktop bridge is unavailable\");/console.warn(\"Stub mode in container\"); return { account: { mode: \"local\" }, projects: { get: () => Promise.resolve(null) } } as any;/' src/platform/localDesktop.ts && npm run dev:web"]
     networks:
       - raider-net
     restart: unless-stopped
