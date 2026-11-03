@@ -28,3 +28,18 @@ comfiui:
 
 status:
 	$(COMPOSE) ps
+
+# apgrade: git pull main + rebuild + restart
+upgrade:
+	git checkout main && git pull origin main || true
+	git checkout raider-host || true
+	$(COMPOSE) down
+	$(COMPOSE) build --no-cache
+	$(COMPOSE) up -d --build
+
+restart:
+	$(COMPOSE) restart
+
+rebuild:
+	$(COMPOSE) down
+	$(COMPOSE) up -d --build

@@ -7,8 +7,11 @@ services:
       dockerfile: Dockerfile
     container_name: magostudio
     ports:
-      - "8080:8080"
+      - "7008:8080"
     volumes:
+      - ./work:/app/work
+      - ./video-output:/app/video-output
+      - ./source:/app/source
       - ./data:/app/data
     environment:
       - PYTHONUNBUFFERED=1
@@ -17,13 +20,18 @@ services:
     restart: unless-stopped
 
   comfiui:
-    image: comfyui/comfyui:latest
+    build:
+      context: ./comfyui-portable
+      dockerfile: Dockerfile
     container_name: comfiui-portable
     ports:
       - "8188:8188"
     volumes:
+      - ./work:/comfyui/work
+      - ./video-output:/comfyui/video-output
       - ./comfyui-output:/comfyui/output
       - ./comfyui-models:/comfyui/models
+      - ./source:/comfyui/source
     environment:
       - COMFYUI_PORT=8188
     networks:
