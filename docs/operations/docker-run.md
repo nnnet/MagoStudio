@@ -32,7 +32,17 @@
 | `./comfyui-models` | Модели ComfyUI |
 | `./comfyui-output` | Выход ComfyUI |
 
-## Локальные модели (без облака)
+## Локальные модели (без облака) и провайдеры
+
+Провайдер выбирается автоматически по модели (код: `src/platform/modelProviders.ts`):
+
+| Модель | Провайдер | Где |
+|--------|-----------|-----|
+| `miniмax_h3_local` (видео) | `local-comfy` | ComfyUI, `./comfyui-models` |
+| `qwen` (изображение) | `local-comfy` | ComfyUI, `./comfyui-models` |
+| Остальные (`kling`, `seedance`, `wan`, `gpt_image_2`…) | `mago-cloud` | внешнее облако, нужен аккаунт |
+
+Выбор провайдера — в UI: **Settings → Model provider**. В конфиге Docker его не переключают.
 
 По умолчанию включены: **MiniMax H3** (видео) + **Qwen3-VL 4B** (подписи).
 
