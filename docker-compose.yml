@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  magostudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: magostudio
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - raider-net
+    restart: unless-stopped
+
+  comfiui:
+    image: comfyui/comfyui:latest
+    container_name: comfiui-portable
+    ports:
+      - "8188:8188"
+    volumes:
+      - ./comfyui-output:/comfyui/output
+      - ./comfyui-models:/comfyui/models
+    environment:
+      - COMFYUI_PORT=8188
+    networks:
+      - raider-net
+    restart: unless-stopped
+
+networks:
+  raider-net:
+    driver: bridge
