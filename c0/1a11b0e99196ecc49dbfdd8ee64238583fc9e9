@@ -1,0 +1,22 @@
+docker-compose.yml
+  s_d041fa3849bec9::t_d4ab51ff8c12f8 44-55
+  s_d041fa3849bec9::t_246c062cfe37ff 18,42-43,56-57
+  s_d041fa3849bec9::t_a654684ff660ef 58-60
+  s_d041fa3849bec9::t_ecea383dfe8e84 61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c01a11b0e99196ecc49dbfdd8ee64238583fc9e9",
+  "prompts": {},
+  "sessions": {
+    "s_d041fa3849bec9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05276843-7763-45f0-b934-fb111e15f3d0",
+        "model": "nvidia/nemotron-3.5-super-vl:free"
+      },
+      "human_author": "nnnet <21066097+nnnet@users.noreply.github.com>"
+    }
+  }
+}
