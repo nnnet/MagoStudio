@@ -15,7 +15,7 @@ services:
       - ./data:/app/data
     environment:
       - PYTHONUNBUFFERED=1
-    entrypoint: ["/bin/sh", "-c", "sed -i 's/throw new Error(\"The Mago desktop bridge is unavailable\");/console.warn(\"Stub mode in container\"); return { account: { mode: \"local\" }, projects: { get: () => Promise.resolve(null) } } as any;/' src/platform/localDesktop.ts && npm run dev:web"]
+      - MAGO_BACKEND_URL=http://mock-auth:9999
     networks:
       - raider-net
     restart: unless-stopped
@@ -35,6 +35,26 @@ services:
       - ./source:/comfyui/source
     environment:
       - COMFYUI_PORT=8188
+    networks:
+      - raider-net
+    restart: unless-stopped
+
+  mock-auth:
+    image: python:3.11-slim
+    command:
+      - python3
+      - -c
+      - >
+        from http.server import HTTPServer, BaseHTTPRequestHandler; import json;
+        class H(BaseHTTPRequestHandler):
+          def do_POST(self):
+            self.send_response(200);
+            self.send_header('Content-Type', 'application/json');
+            self.end_headers();
+            self.wfile.write(json.dumps({'api_key': 'container-key', 'key_id': 'container', 'enabled': True}).encode());
+        HTTPServer(('0.0.0.0', 9999), H).serve_forever()
+    ports:
+      - "9999:9999"
     networks:
       - raider-net
     restart: unless-stopped
