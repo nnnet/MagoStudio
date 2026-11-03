@@ -1,0 +1,25 @@
+comfyui-portable/Dockerfile
+  s_d041fa3849bec9::t_643f29a0c0b0d5 1-6
+Makefile
+  s_d041fa3849bec9::t_e82bfb42fe44d5 31-45
+docker-compose.yml
+  s_d041fa3849bec9::t_41594197f061b1 12-14,30-31,34
+  s_d041fa3849bec9::t_11b04870d3cabf 10
+  s_d041fa3849bec9::t_a76b786507c254 23-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "731100c3b1c45cf4b2082ac9c8ae6359e31930e0",
+  "prompts": {},
+  "sessions": {
+    "s_d041fa3849bec9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05276843-7763-45f0-b934-fb111e15f3d0",
+        "model": "thinkingmachines/inkling-small:free"
+      },
+      "human_author": "nnnet <21066097+nnnet@users.noreply.github.com>"
+    }
+  }
+}
