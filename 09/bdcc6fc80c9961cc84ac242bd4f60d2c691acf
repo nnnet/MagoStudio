@@ -1,0 +1,24 @@
+docker-compose.yml
+  s_d041fa3849bec9::t_c78451098f0a37 1-35
+Dockerfile
+  s_d041fa3849bec9::t_fef53fc96f14bd 1-6
+Makefile
+  s_d041fa3849bec9::t_66c4530b9a7d62 13-30
+  s_d041fa3849bec9::t_cd15955f6c0878 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "09bdcc6fc80c9961cc84ac242bd4f60d2c691acf",
+  "prompts": {},
+  "sessions": {
+    "s_d041fa3849bec9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05276843-7763-45f0-b934-fb111e15f3d0",
+        "model": "thinkingmachines/inkling-small:free"
+      },
+      "human_author": "nnnet <21066097+nnnet@users.noreply.github.com>"
+    }
+  }
+}
